@@ -9,6 +9,7 @@
 // myRTC(clock, data, rst)
 virtuabotixRTC myRTC(7, 6, 5);
 
+//Conectar no pino digital 8 do Arduino Uno (Pode mudar o pino de entrada, mas mude tambem o numero do pino no codigo)
 int rele = 8;
 
 void setup()  
@@ -107,7 +108,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     
   }
-  else if(myRTC.hours == 16 && myRTC.minutes >= 59 && myRTC.seconds >= 30 ) //Decimo toque.
+  else if(myRTC.hours == 16 && myRTC.minutes >= 59 && myRTC,seconds >= 30 ) //Decimo toque.
   {
     digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
