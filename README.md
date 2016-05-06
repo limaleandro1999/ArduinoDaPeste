@@ -1,5 +1,5 @@
 # ArduinoDaPeste
-Código para projeto com arduino e o módulos RTCs
+Códigos e documentações do projeto Arduino da Peste
 
 Módulo RTC DS1307
 
