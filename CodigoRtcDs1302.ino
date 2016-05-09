@@ -2,6 +2,9 @@
 // Alteracoes e adaptacoes : Arduino e Cia e Arduino da Peste
 // Baseado no programa original de Krodal e na biblioteca virtuabotixRTC
 
+// Abaixo link para baixar a biblioteca necessaria
+//https://drive.google.com/folderview?id=0B7LWVhDM1smbMFZfZ1NCUHRuS3c&usp=sharing
+
 // Carrega a biblioteca virtuabotixRTC
 #include <virtuabotixRTC.h>           
 
