@@ -108,7 +108,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     
   }
-  else if(myRTC.hours == 16 && myRTC.minutes >= 59 && myRTC,seconds >= 30 ) //Decimo toque.
+  else if(myRTC.hours == 16 && myRTC.minutes >= 59 && myRTC.seconds >= 30 ) //Decimo toque.
   {
     digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
