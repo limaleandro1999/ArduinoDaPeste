@@ -1,3 +1,6 @@
+// Abaixo link para baixar a biblioteca necessaria
+//https://drive.google.com/folderview?id=0B7LWVhDM1smbMFZfZ1NCUHRuS3c&usp=sharing
+
 #include <Wire.h>
 
 #include "RTClib.h"
