@@ -39,21 +39,19 @@ void loop()
 
 void horasDeTocar()
 {
-  if(myRTC.hours == 07 && myRTC.minutes >= 10) //Primeiro toque.
+  if(myRTC.hours == 07 && myRTC.minutes == 10 && myRTC.seconds == 0) //Primeiro toque.
   {
     digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
     delay(5000);  
     digitalWrite(rele, LOW);
-    
   }
-  else if(myRTC.hours == 07 && myRTC.minutes >= 20) //Segundo toque.
+  else if(myRTC.hours == 07 && myRTC.minutes >= 20 && myRTC.seconds == 0) //Segundo toque.
   {
     digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
     delay(5000);  
     digitalWrite(rele, LOW);
-    
   }
   else if(myRTC.hours == 09 && myRTC.minutes >= 00) //Terceiro toque.
   {
