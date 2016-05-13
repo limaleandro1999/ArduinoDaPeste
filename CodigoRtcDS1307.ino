@@ -58,10 +58,11 @@ void horasDeTocar()
 {
   DateTime now = rtc.now();
   
-  //Codigo para teste.
-  //Ele nao ira tocar apenas mostrara no serial monitor "Tocando"
+  //Codigo abaixo, entre comentarios( /* */) para teste.
+  //Modifique os horarios
+  //Ele nao ira tocar, apenas mostrara no serial monitor "Tocando"
   /*
-  if(now.hour() == 9 && now.minute() == 50 && now.second() >= 0) //Primeiro toque.
+  if(now.hour() == 0 && now.minute() == 0 && now.second() == 0) //Primeiro toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -72,7 +73,7 @@ void horasDeTocar()
     piscaLed();
   }
   */
-  if(now.hour() == 7 && now.minute() == 10 && now.second() >= 0) //Primeiro toque.
+  if(now.hour() == 7 && now.minute() == 10 && now.second() == 0) //Primeiro toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -82,7 +83,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 7 && now.minute() == 20 && now.second() >= 0) //Segundo toque.
+  else if(now.hour() == 7 && now.minute() == 20 && now.second() == 0) //Segundo toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -92,7 +93,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 9 && now.minute() == 0 && now.second() >= 0) //Terceiro toque.
+  else if(now.hour() == 9 && now.minute() == 0 && now.second() == 0) //Terceiro toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -102,7 +103,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 9 && now.minute() == 20 && now.second() >= 0) //Quarto toque.
+  else if(now.hour() == 9 && now.minute() == 20 && now.second() == 0) //Quarto toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -112,7 +113,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 11 && now.minute() == 50 && now.second() >= 0) //Quinto toque.
+  else if(now.hour() == 11 && now.minute() == 50 && now.second() == 0) //Quinto toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -122,7 +123,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 13 && now.minute() == 10 && now.second() >= 0) //Sexto toque.
+  else if(now.hour() == 13 && now.minute() == 10 && now.second() == 0) //Sexto toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -132,7 +133,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 13 && now.minute() == 20 && now.second() >= 0) //Setimo toque.
+  else if(now.hour() == 13 && now.minute() == 20 && now.second() == 0) //Setimo toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -142,7 +143,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 15 && now.minute() == 0 && now.second() >= 0) //Oitavo toque.
+  else if(now.hour() == 15 && now.minute() == 0 && now.second() == 0) //Oitavo toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -152,7 +153,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 15 && now.minute() == 20 && now.second() >= 0) //Nono toque.
+  else if(now.hour() == 15 && now.minute() == 20 && now.second() == 0) //Nono toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -162,7 +163,7 @@ void horasDeTocar()
     digitalWrite(rele, LOW);
     piscaLed();
   }
-  else if(now.hour() == 16 && now.minute() == 59 && now.second() >= 0) //Decimo toque.
+  else if(now.hour() == 16 && now.minute() == 59 && now.second() == 0) //Decimo toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
