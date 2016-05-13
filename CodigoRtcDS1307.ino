@@ -58,6 +58,20 @@ void horasDeTocar()
 {
   DateTime now = rtc.now();
   
+  //Codigo para teste.
+  //Ele nao ira tocar apenas mostrara no serial monitor "Tocando"
+  /*
+  if(now.hour() == 9 && now.minute() == 50 && now.second() >= 0) //Primeiro toque.
+  {
+    Serial.print("Esta tocando\n");
+    digitalWrite(ledL, HIGH);
+    //digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
+    //digitalWrite(rele, LOW);
+    piscaLed();
+  }
+  */
   if(now.hour() == 7 && now.minute() == 10 && now.second() >= 0) //Primeiro toque.
   {
     Serial.print("Esta tocando\n");
