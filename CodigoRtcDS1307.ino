@@ -58,11 +58,10 @@ void horasDeTocar()
 {
   DateTime now = rtc.now();
   
-  //Codigo abaixo, entre comentarios( /* */) para teste.
-  //Modifique os horarios
-  //Ele nao ira tocar, apenas mostrara no serial monitor "Tocando"
+  //Codigo para teste.
+  //Ele nao ira tocar apenas mostrara no serial monitor "Tocando"
   /*
-  if(now.hour() == 0 && now.minute() == 0 && now.second() == 0) //Primeiro toque.
+  if(now.hour() == 9 && now.minute() == 50 && now.second() == 0) //Primeiro toque.
   {
     Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
@@ -81,7 +80,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+    //piscaLed();
   }
   else if(now.hour() == 7 && now.minute() == 20 && now.second() == 0) //Segundo toque.
   {
@@ -91,7 +90,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+    //piscaLed();
   }
   else if(now.hour() == 9 && now.minute() == 0 && now.second() == 0) //Terceiro toque.
   {
@@ -101,7 +100,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+   // piscaLed();
   }
   else if(now.hour() == 9 && now.minute() == 20 && now.second() == 0) //Quarto toque.
   {
@@ -111,7 +110,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+  //  piscaLed();
   }
   else if(now.hour() == 11 && now.minute() == 50 && now.second() == 0) //Quinto toque.
   {
@@ -121,7 +120,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+   // piscaLed();
   }
   else if(now.hour() == 13 && now.minute() == 10 && now.second() == 0) //Sexto toque.
   {
@@ -131,7 +130,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+    //piscaLed();
   }
   else if(now.hour() == 13 && now.minute() == 20 && now.second() == 0) //Setimo toque.
   {
@@ -141,7 +140,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+   // piscaLed();
   }
   else if(now.hour() == 15 && now.minute() == 0 && now.second() == 0) //Oitavo toque.
   {
@@ -151,7 +150,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+ //   piscaLed();
   }
   else if(now.hour() == 15 && now.minute() == 20 && now.second() == 0) //Nono toque.
   {
@@ -161,7 +160,7 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+   // piscaLed();
   }
   else if(now.hour() == 16 && now.minute() == 59 && now.second() == 0) //Decimo toque.
   {
@@ -171,15 +170,15 @@ void horasDeTocar()
     //Toca 15 segundos (15 * 1000)
     delay(15000);    
     digitalWrite(rele, LOW);
-    piscaLed();
+   // piscaLed();
   }
   else
   {
     digitalWrite(rele, LOW); //Sirene desligada.
-    piscaLed();
+    //piscaLed();
   }
 }
-
+/*
 void piscaLed()
 {
   digitalWrite(ledL, HIGH);
@@ -187,3 +186,4 @@ void piscaLed()
   digitalWrite(ledL, LOW);
   delay(500);
 }
+*/
