@@ -21,6 +21,7 @@ void setup ()
   rtc.begin(); //inicia o objeto rtc
   
   //Comente a linha abaixo depois da primeira compilacao.
+  //Se seu RTC ja esta com as horas configuradas, deixe esta linha comentada !
   //rtc.adjust(DateTime(__DATE__, __TIME__));
 
 }
