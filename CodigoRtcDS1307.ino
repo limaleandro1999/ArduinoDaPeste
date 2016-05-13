@@ -110,7 +110,7 @@ void horasDeTocar()
   }
   else if(now.hour() == 13 && now.minute() == 10 && now.second() >= 0) //Sexto toque.
   {
-    SSerial.print("Esta tocando\n");
+    Serial.print("Esta tocando\n");
     digitalWrite(ledL, HIGH);
     digitalWrite(rele, HIGH);
     //Toca 15 segundos (15 * 1000)
