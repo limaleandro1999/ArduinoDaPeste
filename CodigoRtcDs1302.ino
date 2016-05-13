@@ -14,17 +14,20 @@ virtuabotixRTC myRTC(7, 6, 5);
 
 //Conectar no pino digital 8 do Arduino Uno (Pode mudar o pino de entrada, mas mude tambem o numero do pino no codigo)
 int rele = 8;
+int ledL = 13;
 
 void setup()  
 {      
   Serial.begin(9600);
 
   pinMode(rele, OUTPUT);
+  pinMode(ledL, OUTPUT);
   
-  // Informacoes iniciais de data e hora
-  // Apos setar as informacoes, comente a linha abaixo
+  //Informacoes iniciais de data e hora
+  //Se seu RTC ja esta ajustado a hora e data, deixe comentado a linha(29) de configuracao do RTC
+  //Apos ajustar as informacoes de hora e data, comente a linha abaixo
+  //myRTC.setDS1302Time(00, 58, 23, 2, 17, 11, 2014);
   // (segundos, minutos, hora, dia da semana, dia do mes, mes, ano)
-  myRTC.setDS1302Time(00, 58, 23, 2, 17, 11, 2014);
 }
 
 void loop()  
@@ -39,88 +42,135 @@ void loop()
 
 void horasDeTocar()
 {
+  //Codigo abaixo, entre comentarios( /* */) para teste.
+  //Modifique os horarios
+  //Ele nao ira tocar, apenas mostrara no serial monitor "Tocando"
+  /* 
+    if(myRTC.hours == 07 && myRTC.minutes == 10 && myRTC.seconds == 0) //Primeiro toque.
+    {
+      Serial.print("Esta tocando\n");
+      digitalWrite(ledL, HIGH);
+      //digitalWrite(rele, HIGH);
+      //Toca 15 segundos (15 * 1000)
+      delay(15000);    
+      //digitalWrite(rele, LOW);
+      piscaLed();
+    }
+  */
+  
   if(myRTC.hours == 07 && myRTC.minutes == 10 && myRTC.seconds == 0) //Primeiro toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
+    piscaLed();
   }
-  else if(myRTC.hours == 07 && myRTC.minutes >= 20 && myRTC.seconds == 0) //Segundo toque.
+  else if(myRTC.hours == 07 && myRTC.minutes == 20 && myRTC.seconds == 0) //Segundo toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
+    piscaLed();
   }
-  else if(myRTC.hours == 09 && myRTC.minutes >= 00) //Terceiro toque.
+  else if(myRTC.hours == 09 && myRTC.minutes == 00 && myRTC.seconds == 0) //Terceiro toque.
   {
+    dSerial.print("Esta tocando\n");
+    digitalWrite(ledL, HIGH);
     digitalWrite(rele, HIGH);
-    Serial.print("Esta tocando\n");
-    delay(5000);  
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 09 && myRTC.minutes >= 20) //Quaerto toque.
+  else if(myRTC.hours == 09 && myRTC.minutes == 20 && myRTC.seconds == 0) //Quaerto toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 11 && myRTC.minutes >= 50) //Quinto toque.
+  else if(myRTC.hours == 11 && myRTC.minutes == 50 && myRTC.seconds == 0) //Quinto toque.
   {
+    dSerial.print("Esta tocando\n");
+    digitalWrite(ledL, HIGH);
     digitalWrite(rele, HIGH);
-    Serial.print("Esta tocando\n");
-    delay(5000);  
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 13 && myRTC.minutes >= 10) //Sexto toque.
+  else if(myRTC.hours == 13 && myRTC.minutes == 10 && myRTC.seconds == 0) //Sexto toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 13 && myRTC.minutes >= 20) //Setimo toque.
+  else if(myRTC.hours == 13 && myRTC.minutes == 20 && myRTC.seconds == 0) //Setimo toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 15 && myRTC.minutes >= 00) //Oitavo toque.
+  else if(myRTC.hours == 15 && myRTC.minutes == 00 && myRTC.seconds == 0) //Oitavo toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 15 && myRTC.minutes >= 20) //Nono toque.
+  else if(myRTC.hours == 15 && myRTC.minutes == 20 && myRTC.seconds == 0) //Nono toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
-  else if(myRTC.hours == 16 && myRTC.minutes >= 59 && myRTC.seconds >= 30 ) //Decimo toque.
+  else if(myRTC.hours == 16 && myRTC.minutes == 59 && myRTC.seconds >= 30 && myRTC.seconds == 0) //Decimo toque.
   {
-    digitalWrite(rele, HIGH);
     Serial.print("Esta tocando\n");
-    delay(5000);  
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(15000);    
     digitalWrite(rele, LOW);
-    
+    piscaLed();
   }
   else
   {
     digitalWrite(rele, LOW);  //Rele desligado.
+    piscaLed();
   }
+}
+
+void piscaLed()
+{
+  digitalWrite(ledL, HIGH);
+  delay(500);
+  digitalWrite(ledL, LOW);
+  delay(500);
 }
 
 void showInformations()
