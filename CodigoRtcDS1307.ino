@@ -2,7 +2,6 @@
 //https://drive.google.com/folderview?id=0B7LWVhDM1smbMFZfZ1NCUHRuS3c&usp=sharing
 
 #include <Wire.h>
-
 #include "RTClib.h"
 
 // Objeto rtc (relogio de tempo real)
@@ -27,11 +26,13 @@ void setup ()
   //rtc.adjust(DateTime(__DATE__, __TIME__));
 
 }
+
 void loop()
 {
   showInformations();
   horasDeTocar();
 }
+
 void showInformations()
 {
   DateTime now = rtc.now();
@@ -52,132 +53,89 @@ void showInformations()
   Serial.print(now.second(), DEC);
   Serial.println();
   
-  delay(1000);
+  //delay(1000);
 }
+
 void horasDeTocar()
 {
   DateTime now = rtc.now();
   
+  //==============================================================================================\\
+  
   //Codigo abaixo, entre comentarios( /* */) para teste.
   //Modifique os horarios
   //Ele nao ira tocar, apenas mostrara no serial monitor "Tocando"
-  /*
-  if(now.hour() == 0 && now.minute() == 0 && now.second() == 0) //Primeiro toque.
+  
+  if(now.hour() == 7 && now.minute() == 33 && now.second() == 1) //Primeiro toque.
   {
-    Serial.print("Esta tocando\n");
+    Serial.print("Esta tocando( Teste )\n");
+    Serial.print("O Leandro (e com acento agudo) lindo \n");
     digitalWrite(ledL, HIGH);
-    //digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    //digitalWrite(rele, LOW);
-    piscaLed();
+    digitalWrite(rele, HIGH); //
+    //Toca X segundos (X * 1000) 
+    delay(3000);    
+    digitalWrite(rele, LOW); //
   }
-  */
+  
+  //==============================================================================================\\
+  
   if(now.hour() == 7 && now.minute() == 10 && now.second() == 0) //Primeiro toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 7 && now.minute() == 20 && now.second() == 0) //Segundo toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 9 && now.minute() == 0 && now.second() == 0) //Terceiro toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 9 && now.minute() == 20 && now.second() == 0) //Quarto toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 11 && now.minute() == 50 && now.second() == 0) //Quinto toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 13 && now.minute() == 10 && now.second() == 0) //Sexto toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 13 && now.minute() == 20 && now.second() == 0) //Setimo toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 15 && now.minute() == 0 && now.second() == 0) //Oitavo toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else if(now.hour() == 15 && now.minute() == 20 && now.second() == 0) //Nono toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
-  else if(now.hour() == 16 && now.minute() == 59 && now.second() == 0) //Decimo toque.
+  else if(now.hour() == 17 && now.minute() == 0 && now.second() == 0) //Decimo toque.
   {
-    Serial.print("Esta tocando\n");
-    digitalWrite(ledL, HIGH);
-    digitalWrite(rele, HIGH);
-    //Toca 15 segundos (15 * 1000)
-    delay(15000);    
-    digitalWrite(rele, LOW);
-    piscaLed();
+    tocando();
   }
   else
   {
-    digitalWrite(rele, LOW); //Sirene desligada.
     piscaLed();
+    digitalWrite(rele, LOW); //Sirene desligada.
+    
   }
+}
+
+void tocando()
+{
+    Serial.print("Esta tocando\n");
+    Serial.print("O Leandro (e com acento agudo) lindo \n");
+    digitalWrite(ledL, HIGH);
+    digitalWrite(rele, HIGH);
+    //Toca 15 segundos (15 * 1000)
+    delay(3000);    
+    digitalWrite(rele, LOW);
 }
 
 void piscaLed()
